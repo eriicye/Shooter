@@ -9,7 +9,10 @@ set(SFML_DIR
 
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
-add_executable(Shooter main.cpp)
+add_executable(Shooter src/Main/main.cpp
+        src/window/window.cpp
+        src/window/window.h
+        src/constants/Constants.h)
 
 target_link_libraries(Shooter PRIVATE
         SFML::Graphics
